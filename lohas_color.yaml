@@ -6,8 +6,7 @@ esphome:
 # Remove this line below if you do not want the bulb to remember the last on/off color state
   esp8266_restore_from_flash: true
   board: esp01_1m
-  includes:
-    - copychan.h
+ 
 
 Change the WiFi SSID and Password below and remove this line to clear the error
 wifi:
