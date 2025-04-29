@@ -6,8 +6,6 @@ esphome:
   platform: ESP8266
   board: esp01_1m
   esp8266_restore_from_flash: true
-  includes:
-    - copychan3.h
     
 wifi:
   ssid: !secret wifi_ssid
@@ -63,6 +61,9 @@ output:
     id: cw
     type: float
     write_action:
+    - output.set_level:
+          id: output_cw0
+          level: !lambda 'return state;'
       - output.set_level:
           id: output_cw1
           level: !lambda 'return state;'
